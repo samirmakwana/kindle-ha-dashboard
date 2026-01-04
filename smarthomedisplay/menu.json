@@ -1,0 +1,12 @@
+{
+	"name": "Launch SmartHome Display",
+	"priority": -997,
+	"items": [
+		{
+			"name": "Launch SmartHome Display",
+			"priority": 1, 
+			"action": "bin/run.sh",
+			"exitmenu": false
+		}
+	]
+}

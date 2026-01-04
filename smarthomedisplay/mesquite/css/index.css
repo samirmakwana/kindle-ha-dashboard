@@ -1,0 +1,240 @@
+html, body {
+    width: 1648px;
+    height: 1236px;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Arial;
+    position: relative;
+}
+
+#errorBox {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-height: 40%;
+    overflow: auto;
+    background: #fff;
+    color: #b00;
+    font: 29px monospace;
+    padding: 6px;
+    border-top: 3px solid #b00;
+    z-index: 10000;
+}
+
+#refreshBox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    display: none;
+}
+
+.container {
+    padding: 48px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.vertical-section {
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+}
+.vertical-section.left {
+    width: 58%;
+    border-right: 5px solid black;
+    padding-right: 48px;
+}
+.vertical-section.right {
+    width: 42%;
+    border-left: 5px solid black;
+    padding-left: 48px;
+}
+
+.widget {
+    margin-bottom: 32px;
+}
+.weatherWidget {
+    margin-bottom: 51px;
+}
+.clockWidget {
+    margin-bottom: 64px;
+}
+.calendarWidget {
+    margin-bottom: 16px;
+}
+
+.weatherWidget .forecast {
+    font-size: 32px;
+    text-align: center;
+    display: inline-block;
+    font-weight: bold;
+    width: 157px;
+}
+.weatherWidget .forecast .img {
+    height: 96px;
+    width: 96px;
+    margin: auto;
+}
+.weatherWidget .forecast .temp-sm {
+    font-size: 29px;
+    color: #2e2e2e;
+    margin-left: 6px;
+}
+
+.cardsWidget .card {
+    border: 3px solid black;
+    padding: 16px;
+    margin-right: 3px;
+    margin-bottom: 16px;
+    display: inline-block;
+    width: 373px;
+    border-radius: 10px;
+}
+.cardsWidget .card .title {
+    font-size: 42px;
+    margin-bottom: 16px;
+}
+.cardsWidget .card .icon {
+    width: 96px;
+    height: 96px;
+}
+.cardsWidget .card .icon img {
+    display: block;
+}
+.cardsWidget .card .value {
+    font-size: 56px;
+    font-weight: bold;
+    text-align: right;
+}
+.cardsWidget .card .val-unit {
+    font-size: 42px;
+    color: #2e2e2e;
+    margin-left: 6px;
+}
+.cardsWidget .card .icon, .cardsWidget .card .value {
+    display: table-cell;
+    vertical-align: middle;
+}
+.cardsWidget .card .row {
+    display: table;
+    width: 100%;
+}
+
+/* Media player specific styling */
+.cardsWidget .card.media-card .value {
+    font-size: 35px;
+}
+
+.badgesWidget {
+    text-align: center;
+}
+.badgesWidget .badge {
+    border: 3px solid black;
+    border-radius: 64px;
+    display: inline-block;
+    padding: 8px 24px 8px 13px;
+    margin-right: 13px;
+    line-height: 1;
+    font-size: 29px;
+    text-align: start;
+}
+.badgesWidget .badge .icon {
+    height: 24px;
+    width: 24px;
+}
+.badgesWidget .badge .icon, .badgesWidget .badge .col {
+    display: inline-block;
+    vertical-align: middle;
+}
+.badgesWidget .badge .value {
+    font-weight: bold;
+}
+
+
+.clockWidget {
+    text-align: center;
+}
+.clockWidget .time {
+    font-size: 128px;
+    font-weight: bold;
+    line-height: 1;
+}
+.clockWidget .date {
+    font-size: 35px;
+}
+
+.notificationWidget {
+    font-size: 32px;
+    text-align: center;
+    height: 80px;
+}
+.notificationWidget .notification {
+    height: 80px;
+    width: 80px;
+    display: inline-block;
+    text-align: center;
+}
+.notificationWidget .text-empty {
+    color: #5f5f5f;
+}
+
+.calendarWidget {
+    height: 402px;
+    overflow-y: auto;
+    font-size: 32px;
+    padding: 16px;
+    background-color: #d8d8d8;
+    border-radius: 10px;
+}
+.calendarWidget .title {
+    font-weight: bold;
+    font-size: 38px;
+}
+.calendarWidget .event {
+    margin-top: 16px;
+}
+.calendarWidget .event .date {
+    font-weight: bold;
+}
+.calendarWidget .text-empty {
+    color: #535353;
+    padding-top: 160px;
+    text-align: center;
+}
+
+.buttonsWidget .button {
+    border: 3px solid black;
+    border-radius: 10px;
+    display: inline-block;
+    width: 272px;
+    font-size: 29px;
+    font-weight: bold;
+    padding: 6px;
+    line-height: 1;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.buttonsWidget .button:not(.disabled).active {
+    background-color: #a2a2a2;
+}
+.buttonsWidget .button.disabled {
+    opacity: 0.5;
+}
+.buttonsWidget .button .icon {
+    height: 80px;
+    width: 80px;
+}
+.buttonsWidget .button .title {
+    text-align: center;
+    width: 161px;
+}
+.buttonsWidget .button .title, .buttonsWidget .button .icon {
+    display: inline-block;
+    vertical-align: middle;
+}

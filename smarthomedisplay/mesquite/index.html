@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1648, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Kindle Dashboard</title>
+    <script>
+        if(window.kindle) {
+            kindle.device.setOrientation('landscapeLeft');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="vertical-section left">
+            <!-- Weather -->
+            <div class="weatherWidget widget" id="weatherWidget">
+                <div class="forecast">
+                    <div class="day">-</div>
+                    <div class="img"><img src=""></div>
+                    <div><span class="temp">-</span><span class="temp-sm">-</span></div>
+                </div>
+                <div class="forecast">
+                    <div class="day">-</div>
+                    <div class="img"><img src=""></div>
+                    <div><span class="temp">-</span><span class="temp-sm">-</span></div>
+                </div>
+                <div class="forecast">
+                    <div class="day">-</div>
+                    <div class="img"><img src=""></div>
+                    <div><span class="temp">-</span><span class="temp-sm">-</span></div>
+                </div>
+                <div class="forecast">
+                    <div class="day">-</div>
+                    <div class="img"><img src=""></div>
+                    <div><span class="temp">-</span><span class="temp-sm">-</span></div>
+                </div>
+                <div class="forecast">
+                    <div class="day">-</div>
+                    <div class="img"><img src=""></div>
+                    <div><span class="temp">-</span><span class="temp-sm">-</span></div>
+                </div>
+            </div>
+            
+            <!-- Badges -->
+            <div class="badgesWidget widget">
+                <div class="badge" data-entity-id="sensor.nightwing_battery_level" data-val-type="battery">
+                    <div class="icon"><img src="img/badges/battery-100.svg"></div>
+                    <div class="col">
+                        <div class="title">Tablet</div>
+                        <div class="value"><span class="val">-</span><span class="val-unit">%</span></div>
+                    </div>
+                </div>
+                <div class="badge" data-entity-id="sensor.batphone_battery_level" data-val-type="battery">
+                    <div class="icon"><img src="img/badges/battery-100.svg"></div>
+                    <div class="col">
+                        <div class="title">Phone</div>
+                        <div class="value"><span class="val">-</span><span class="val-unit">%</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Temperature Card -->
+            <div class="cardsWidget widget">
+                <div class="card" data-entity-id="sensor.pirateweather_temperature">
+                    <div class="title">Temperature</div>
+                    <div class="row">
+                        <div class="icon"><img src="img/temp-outside.svg"></div>
+                        <div class="value"><span class="val">-</span><span class="val-unit">°C</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Media Players -->
+            <div class="cardsWidget widget">
+                <div class="card media-card" data-entity-id="media_player.battv">
+                    <div class="title">LG OLED TV</div>
+                    <div class="row">
+                        <div class="icon"><img src="img/media-tv.svg"></div>
+                        <div class="value media-state"><span class="val">-</span></div>
+                    </div>
+                </div>
+                <div class="card media-card" data-entity-id="media_player.joker">
+                    <div class="title">Apple TV 4K</div>
+                    <div class="row">
+                        <div class="icon"><img src="img/appletv.svg"></div>
+                        <div class="value media-state"><span class="val">-</span></div>
+                    </div>
+                </div>
+                <div class="card media-card" data-entity-id="media_player.lazarus">
+                    <div class="title">HomePod</div>
+                    <div class="row">
+                        <div class="icon"><img src="img/homepod.svg"></div>
+                        <div class="value media-state"><span class="val">-</span></div>
+                    </div>
+                </div>
+                <div class="card media-card" data-entity-id="media_player.playstation_5">
+                    <div class="title">PlayStation 5</div>
+                    <div class="row">
+                        <div class="icon"><img src="img/playstation.svg"></div>
+                        <div class="value media-state"><span class="val">-</span></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="vertical-section right">
+            <!-- Clock -->
+            <div class="clockWidget widget">
+                <div class="time" id="clockTime">00:00</div>
+                <div class="date" id="clockDate">Mo, 1. Jan 1900</div>
+            </div>
+
+            <!-- Notifications -->
+            <div class="notificationWidget widget" id="notificationList"></div>
+
+            <!-- calendar -->
+            <div class="calendarWidget widget">
+                <div class="title">UPCOMING EVENTS</div>
+                <div id="calendarList"></div>
+            </div>
+
+            <!-- Buttons -->
+            <div class="buttonsWidget widget" id="buttonsWidget">
+                <div class="button" data-entity-id="light.bedroomhue">
+                    <div class="icon"><img src="img/ceiling-light.svg"></div>
+                    <div class="title">Bedroom Light</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="refreshBox"></div>
+    
+    <script src="config.js"></script>
+    <script src="js/error-logger.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

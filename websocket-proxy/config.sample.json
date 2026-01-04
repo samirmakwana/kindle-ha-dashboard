@@ -1,0 +1,9 @@
+{
+    "homeassistant": {
+        "wsUrl": "http://homeassistant.local:8123",
+        "accessToken": "<long_lived_access_token>"
+    },
+    "kindle-display": {
+        "accessToken": "<access_token_for_extension>"
+    }
+}

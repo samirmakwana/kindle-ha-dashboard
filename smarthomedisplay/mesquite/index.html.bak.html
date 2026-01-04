@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1648, initial-scale=1.0">
+    <title>Kindle Smart Home Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (window.kindle) {
+            kindle.device.setOrientation('landscapeLeft');
+        }
+    </script>
+</head>
+<body>
+<div id="refreshBox"></div>
+<div class="container">
+    <div class="vertical-section left">
+        <!-- Clock Widget -->
+        <div class="widget clockWidget">
+            <div id="clockTime" class="time">--:--</div>
+            <div id="clockDate" class="date">Loading...</div>
+        </div>
+
+        <!-- Weather Widget -->
+        <div class="widget weatherWidget" id="weatherWidget">
+            <div class="forecast">
+                <div class="day">Today</div>
+                <img src="img/weather/clear.svg" alt="weather">
+                <div>
+                    <span class="temp">--</span>°<span class="temp-sm">--</span>
+                </div>
+            </div>
+            <div class="forecast">
+                <div class="day">Day 2</div>
+                <img src="img/weather/clear.svg" alt="weather">
+                <div>
+                    <span class="temp">--</span>°<span class="temp-sm">--</span>
+                </div>
+            </div>
+            <div class="forecast">
+                <div class="day">Day 3</div>
+                <img src="img/weather/clear.svg" alt="weather">
+                <div>
+                    <span class="temp">--</span>°<span class="temp-sm">--</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calendar Widget -->
+        <div class="widget calendarWidget">
+            <div class="title">Upcoming Events</div>
+            <div id="calendarList"></div>
+        </div>
+    </div>
+
+    <div class="vertical-section right">
+        <!-- Cards Widget -->
+        <div class="widget cardsWidget">
+            <!-- Media Players -->
+            <div class="card media-card" data-entity-id="media_player.battv">
+                <div class="row">
+                    <div class="icon"><img src="img/media-lgoled.svg"></div>
+                    <div class="value val">--</div>
+                </div>
+            </div>
+            <div class="card media-card" data-entity-id="media_player.joker">
+                <div class="row">
+                    <div class="icon"><img src="img/media-appletv.svg"></div>
+                    <div class="value val">--</div>
+                </div>
+            </div>
+            <div class="card media-card" data-entity-id="media_player.lazarus">
+                <div class="row">
+                    <div class="icon"><img src="img/media-homepod.svg"></div>
+                    <div class="value val">--</div>
+                </div>
+            </div>
+            <div class="card media-card" data-entity-id="media_player.playstation_5">
+                <div class="row">
+                    <div class="icon"><img src="img/media-playstation.svg"></div>
+                    <div class="value val">--</div>
+                </div>
+            </div>
+
+            <!-- Sensors -->
+            <div class="card" data-entity-id="sensor.pirateweather_temperature">
+                <div class="row">
+                    <div class="icon"><img src="img/weather/temp-outside.svg"></div>
+                    <div class="value val">--</div>
+                </div>
+            </div>
+            <div class="card" data-entity-id="sensor.pirateweather_summary">
+                <div class="row">
+                    <div class="icon"><img src="img/weather/clear.svg"></div>
+                    <div class="value val">--</div>
+                </div>
+            </div>
+            <div class="card" data-entity-id="light.bedroomhue">
+                <div class="row">
+                    <div class="icon"><img src="img/ceiling-light.svg"></div>
+                    <div class="value val">--</div>
+                </div>
+            </div>
+            <div class="card" data-entity-id="sensor.nightwing_battery_level">
+                <div class="row">
+                    <div class="icon"><img src="img/led-strip.svg"></div>
+                    <div class="value val">--</div>
+                </div>
+            </div>
+            <div class="card" data-entity-id="sensor.batphone_battery_level">
+                <div class="row">
+                    <div class="icon"><img src="img/led-strip.svg"></div>
+                    <div class="value val">--</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Buttons Widget -->
+        <div class="widget buttonsWidget" id="buttonsWidget">
+            <div class="button" data-entity-id="input_button.kindle_display_refresh">
+                <div class="icon"><img src="img/desklamp.svg"></div>
+                <div class="title">Refresh</div>
+            </div>
+            <div class="button" data-entity-id="input_button.kindle_display_reload_page">
+                <div class="icon"><img src="img/computer-screen.svg"></div>
+                <div class="title">Reload</div>
+            </div>
+        </div>
+
+        <!-- Notifications -->
+        <div class="widget notificationWidget" id="notificationList"></div>
+    </div>
+</div>
+
+<script src="config.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
